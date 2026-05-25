@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color tokens — mirrored as CSS vars for runtime use */
+    --gl-navy-900: #0e1b33;
+    --gl-navy-700: #1b3a5c;
+    --gl-navy-500: #3a5f8a;
+    --gl-navy-100: #e5ecf4;
+    --gl-cream-50: #faf7f2;
+    --gl-cream-100: #f4efe6;
+    --gl-cream-200: #e8dfce;
+    --gl-coral-500: #e8927c;
+    --gl-coral-400: #f0ab97;
+    --gl-coral-100: #fbe5dd;
+    --gl-olive-600: #6b7a4f;
+    --gl-olive-100: #e8ecda;
+    --gl-amber-500: #d4a24c;
+    --gl-amber-100: #fbf1dd;
+    --gl-red-500: #c84b3f;
+    --gl-red-100: #f8e1de;
+    --gl-text-primary: #1a1f2b;
+    --gl-text-secondary: #4a5468;
+    --gl-text-tertiary: #7b8499;
+  }
+
+  html,
+  body {
+    background-color: var(--gl-cream-50);
+    color: var(--gl-text-primary);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans text-body;
+  }
+
+  ::selection {
+    background-color: var(--gl-coral-100);
+    color: var(--gl-navy-900);
+  }
+
+  /* Tabular numerics for any element with .tabular */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply outline-none focus-visible:shadow-focus focus-visible:ring-[1.5px] focus-visible:ring-navy-500;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
