@@ -16,15 +16,18 @@ export default function HomePage() {
           A calm, warm AI concierge for your business. Set it up in three minutes —
           your visitors will think it&apos;s you on the other end.
         </p>
-        <div className="flex items-center justify-center gap-3 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <Button asChild variant="primary" size="lg">
             <Link href="/onboarding">
               Start setup
               <ArrowRight size={18} strokeWidth={1.75} />
             </Link>
           </Button>
+          <Button asChild variant="coral" size="lg">
+            <Link href="/demo/athenian-dental">See the chatbot live</Link>
+          </Button>
           <Button asChild variant="ghost" size="lg">
-            <Link href="/dashboard">View dashboard</Link>
+            <Link href="/dashboard">Dashboard</Link>
           </Button>
         </div>
       </div>
